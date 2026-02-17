@@ -1,0 +1,45 @@
+---
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+function isActive(href: string): boolean {
+  if (href === '/') return currentPath === '/';
+  return currentPath === href || currentPath.startsWith(href + '/');
+}
+
+const links = [
+  { href: '/', label: 'Startseite' },
+  { href: '/praxisbeschreibung', label: 'Praxisbeschreibung' },
+  { href: '/allgemeine-hno-leistungen', label: 'Allgemeine HNO-Leistungen' },
+  { href: '/operative-eingriffe', label: 'Operative Eingriffe' },
+  { href: '/allergien', label: 'Allergien' },
+  { href: '/schlaf-apnoe', label: 'Schlaf-Apnoe' },
+  { href: '/akupunktur-und-schmerztherapie', label: 'Akupunktur & Schmerztherapie' },
+  { href: '/schwindel', label: 'Schwindel' },
+  { href: '/curriculum-vitae', label: 'Curriculum Vitae' },
+  { href: '/praxisteam', label: 'Praxisteam' },
+  { href: '/impressum', label: 'Impressum' },
+  { href: '/datenschutz', label: 'Datenschutz' },
+];
+---
+
+<nav>
+  <ul class="space-y-0.5">
+    {links.map(link => (
+      <li>
+        <a
+          href={link.href}
+          class:list={[
+            'group block px-3 py-2 rounded-md text-sm no-underline transition-all duration-200',
+            isActive(link.href)
+              ? 'bg-blue-600 text-white font-medium shadow-sm'
+              : 'text-gray-700 hover:bg-blue-50 hover:text-blue-700 hover:translate-x-1'
+          ]}
+        >
+          <span class="group-hover:translate-x-0.5 transition-transform duration-200 inline-block">
+            {link.label}
+          </span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>

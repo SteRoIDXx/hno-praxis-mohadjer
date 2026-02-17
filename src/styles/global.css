@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-gray-800 bg-gray-50;
+  font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  @apply text-blue-900;
+}
+
+a {
+  @apply text-blue-600 hover:text-blue-800 transition-colors;
+}

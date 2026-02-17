@@ -1,0 +1,51 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Curriculum Vitae" description="Lebenslauf von Dr. med. Claude Mohadjer – Facharzt für HNO-Heilkunde in Neu Wulmstorf. Ausbildung, Qualifikationen und beruflicher Werdegang.">
+  <h1>Curriculum Vitae</h1>
+
+  <h2 class="text-xl font-semibold mt-8 mb-4">Dr. med. Claude Mohadjer</h2>
+  <p class="text-gray-700 leading-relaxed mb-6">
+    Facharzt für Hals-, Nasen- und Ohrenheilkunde
+  </p>
+
+  <h3 class="text-lg font-semibold mt-6 mb-3">Beruflicher Werdegang</h3>
+  <div class="space-y-3 mb-6">
+    <div class="flex gap-4 text-gray-700">
+      <span class="text-sm text-gray-500 w-32 flex-shrink-0">[Zeitraum]</span>
+      <span>Studium der Humanmedizin</span>
+    </div>
+    <div class="flex gap-4 text-gray-700">
+      <span class="text-sm text-gray-500 w-32 flex-shrink-0">[Zeitraum]</span>
+      <span>Facharztausbildung HNO-Heilkunde</span>
+    </div>
+    <div class="flex gap-4 text-gray-700">
+      <span class="text-sm text-gray-500 w-32 flex-shrink-0">Seit 10/1996</span>
+      <span>Niedergelassener Facharzt für HNO-Heilkunde in Neu Wulmstorf</span>
+    </div>
+  </div>
+
+  <h3 class="text-lg font-semibold mt-6 mb-3">Zusatzqualifikationen</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+      <span class="font-medium text-blue-800">Allergologie</span>
+    </div>
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+      <span class="font-medium text-blue-800">Akupunktur (Vollausbildung)</span>
+    </div>
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+      <span class="font-medium text-blue-800">Schlafmedizin</span>
+    </div>
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+      <span class="font-medium text-blue-800">Neuraltherapie</span>
+    </div>
+  </div>
+
+  <h3 class="text-lg font-semibold mt-6 mb-3">Mitgliedschaften</h3>
+  <ul class="list-disc list-inside space-y-2 text-gray-700">
+    <li>Deutscher Berufsverband der Hals-Nasen-Ohrenärzte e.V.</li>
+    <li>Deutsche Gesellschaft für HNO-Heilkunde, Kopf- und Hals-Chirurgie e.V.</li>
+    <li>Ärztekammer Niedersachsen</li>
+  </ul>
+</MainLayout>
