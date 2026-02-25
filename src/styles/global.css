@@ -12,5 +12,5 @@ h1, h2, h3, h4 {
 }
 
 a {
-  @apply text-blue-600 hover:text-blue-800 transition-colors;
+  @apply text-blue-700 hover:text-orange-500 transition-colors;
 }
